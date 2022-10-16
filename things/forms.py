@@ -7,4 +7,4 @@ from django import forms
 class ThingForm(forms.Form):
     name = forms.CharField(label='name', max_length=35)
     description = forms.CharField(widget=forms.Textarea, label='description')
-    quantity = forms.CharField(widget=forms.NumberInput, label='quantity', min='0', max='50')
+    quantity = forms.CharField(widget=forms.NumberInput(attrs={'min':0, 'max':50}), label='quantity')
